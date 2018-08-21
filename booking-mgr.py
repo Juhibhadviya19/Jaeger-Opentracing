@@ -31,7 +31,7 @@ def booking_mgr(movie):
 def check_cinema(movie):
     with tracer.start_span('CheckCinema', child_of=get_current_span()) as span:
         with span_in_context(span):
-            num = random.randint(1,100)
+            num = random.randint(1,30)
             time.sleep(num)
             cinema_details = "Cinema Details"
             flags = ['true', 'true', 'false']
@@ -43,7 +43,7 @@ def check_cinema(movie):
 def check_showtime( cinema_details ):
     with tracer.start_span('CheckShowtime', child_of=get_current_span()) as span:
         with span_in_context(span):
-            num = random.randint(1,100)
+            num = random.randint(1,30)
             time.sleep(num)
             showtime_details = "Showtime Details"
             flags = ['true', 'true', 'false']
@@ -55,7 +55,7 @@ def check_showtime( cinema_details ):
 def book_show(showtime_details):
     with tracer.start_span('BookShow',  child_of=get_current_span()) as span:
         with span_in_context(span):
-            num = random.randint(1,100)
+            num = random.randint(1,30)
             time.sleep(num)
             Ticket_details = "Ticket Details"
             flags = ['true', 'true', 'false']
