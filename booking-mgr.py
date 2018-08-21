@@ -34,7 +34,7 @@ def check_cinema(movie):
             num = random.randint(1,30)
             time.sleep(num)
             cinema_details = "Cinema Details"
-            flags = ['true', 'true', 'false']
+            flags = ['false', 'true', 'false']
             random_flag = random.choice(flags)
             span.set_tag('error', random_flag)
             span.log_kv({'event': 'CheckCinema' , 'value': cinema_details })
@@ -46,7 +46,7 @@ def check_showtime( cinema_details ):
             num = random.randint(1,30)
             time.sleep(num)
             showtime_details = "Showtime Details"
-            flags = ['true', 'true', 'false']
+            flags = ['false', 'true', 'false']
             random_flag = random.choice(flags)
             span.set_tag('error', random_flag)
             span.log_kv({'event': 'CheckCinema' , 'value': showtime_details })
@@ -58,7 +58,7 @@ def book_show(showtime_details):
             num = random.randint(1,30)
             time.sleep(num)
             Ticket_details = "Ticket Details"
-            flags = ['true', 'true', 'false']
+            flags = ['false', 'true', 'false']
             random_flag = random.choice(flags)
             span.set_tag('error', random_flag)
             span.log_kv({'event': 'CheckCinema' , 'value': showtime_details })
